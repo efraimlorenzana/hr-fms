@@ -2,8 +2,12 @@
     min-height: 75vh;
     max-height: 75vh;
     border: 1px solid $color-primary;
-    background-image: linear-gradient(to bottom right, rgba($color-primary, .5), blue);
+    background-image: linear-gradient(to bottom right, 
+    rgba(black, .8), transparent),
+    url(../../../public/images/file-bg.jpg);
+
     overflow-y: scroll;
+    color: white !important;
     
     @include respond (tab_md) {
         min-height: 100vh;
