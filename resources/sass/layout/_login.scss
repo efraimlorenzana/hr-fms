@@ -35,10 +35,12 @@
         
         &--label-email {
             text-transform: uppercase;
+            color: white;
         }
         
         &--label-password {
             text-transform: uppercase;
+            color: white;
         }
         
         &--input {
@@ -76,12 +78,13 @@
         
         
         &--remember {
+            
             &-checkbox {
                 
             }
             
             &-label {
-                
+                color: red !important;
             }
         }
         

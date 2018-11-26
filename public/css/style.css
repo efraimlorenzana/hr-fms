@@ -527,10 +527,12 @@ main.content {
 
 .login__row--label-email {
   text-transform: uppercase;
+  color: white;
 }
 
 .login__row--label-password {
   text-transform: uppercase;
+  color: white;
 }
 
 .login__row--input-email {
@@ -557,6 +559,10 @@ main.content {
   .login__row--input-password {
     width: 100%;
   }
+}
+
+.login__row--remember-label {
+  color: red !important;
 }
 
 @media (max-width: 700px) {
