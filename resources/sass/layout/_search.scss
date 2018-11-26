@@ -1,0 +1,58 @@
+.search {
+    padding: 5px 20px;
+    background-color: $color-white;
+    border-radius: 100px;
+    border: 2px solid $color-primary;
+    
+    &__form {
+
+    }
+
+    &__icon {
+        margin-right: 20px;
+        color: $color-primary;
+    }
+
+    &__text {
+        outline: none;
+        border: none;
+        width: 300px;
+
+        @include respond (phone_md) {
+            width: 250px;
+        }
+
+        @include respond (phone_sm) {
+            width: 200px;
+        }
+    }
+
+    &__bar {
+        position: relative;
+    }
+
+    &__suggestion {
+        position: absolute;
+        background-color: $color-white;
+        left: 20px;
+        width: 345px;
+        max-height: 200px;
+        z-index: 2000;
+    }
+
+    &__list {
+        
+    }
+
+    &__item {
+        list-style: none;
+        padding: 5px 20px;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: $color-primary;
+            color: white;
+            cursor: pointer;
+        }
+    }
+}

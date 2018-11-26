@@ -1,0 +1,59 @@
+.footer {
+    &__content {
+        padding: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        background-color: #343a40;
+        color: white;
+        float: left;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 15vh;
+
+        @include respond(tab_lg) {
+            height: 17vh;
+        }
+
+        @include respond(tab_md) {
+            height: 20vh;
+        }
+
+        @include respond(tab_sm) {
+            height: 15vh;
+        }
+
+        @include respond (phone_sm) {
+            font-size: 12px;
+        }
+    }
+    
+    &__details {
+        &--app {
+            @include respond(tab_sm) {
+                display: block;
+            }
+
+        }
+        
+        &--user {
+            @include respond(tab_sm) {
+                display: block;
+            }
+
+            @include respond (phone_sm) {
+                margin-bottom: 15px;
+            }
+        }
+        
+        &--project {
+            margin-left: 20px;
+
+            @include respond(tab_sm) {
+                display: block;
+                margin: 0;
+            }
+        }
+    }
+}

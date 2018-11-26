@@ -1,0 +1,67 @@
+.forbidden {
+    padding: 50px;
+    margin: 50px;
+    background-color: black;
+    color: $color-white;
+    
+    @include respond (tab_sm) {
+        padding: 25px;
+        margin: 25px;
+    }
+
+    @include respond (phone_lg) {
+        margin: 0;
+        height: 100vh;
+    }
+    
+    &__message {
+        &--icon {
+            text-align: center;
+            
+            & > i {
+                font-size: 100px;
+                margin-bottom: 20px;
+            }
+        }
+        
+        &--text {
+            & > h1 {
+                text-align: center;
+                color: red;
+                text-transform: uppercase;
+            }
+            
+            & > h3 {
+                text-transform: capitalize;
+                line-height: 1.5;
+                
+                @include respond (tab_md) {
+                    text-align: justify;
+                }
+                
+                @include respond (tab_sm) {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    
+    &__button   {
+        margin-top: 40px;
+        text-align: center;
+
+        @include respond (tab_sm) {
+            margin-bottom: 15px;
+        }
+        
+        & > a {
+            @include respond (phone_sm) {
+                font-size: 13px !important;
+            }
+
+            &:hover {
+                color: greenyellow;
+            }
+        }
+    }
+}

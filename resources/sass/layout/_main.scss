@@ -1,0 +1,22 @@
+.main-content {
+    min-height: 75vh;
+    max-height: 75vh;
+    border: 1px solid $color-primary;
+    background-image: linear-gradient(to bottom right, rgba($color-primary, .5), blue);
+    overflow-y: scroll;
+    
+    @include respond (tab_md) {
+        min-height: 100vh;
+        max-height: inherit;
+    }
+}
+
+.navbar-brand {
+    @include respond (phone_sm) {
+        font-size: 12px;
+    }
+}
+
+.nav-col {
+    padding: 0 !important;
+}

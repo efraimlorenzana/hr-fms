@@ -1,0 +1,50 @@
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// Media Query
+//phone_sm = 400px
+//phone_md = 500px
+//phone_lg = 600px
+//tab_sm = 700px
+//tab_md = 900px
+//tab_lg = 1000px
+//desktop = 1200px
+//big_screen = 1800px
+
+@mixin respond ($device) {
+    @if $device == phone_sm {
+        @media (max-width: 400px) { @content };
+    }
+
+    @if $device == phone_md {
+        @media (max-width: 500px) { @content };
+    }
+
+    @if $device == phone_lg {
+        @media (max-width: 600px) { @content };
+    }
+
+    @if $device == tab_sm {
+        @media (max-width: 700px) { @content };
+    }
+
+    @if $device == tab_md {
+        @media (max-width: 900px) { @content };
+    }
+
+    @if $device == tab_lg {
+        @media (max-width: 1000px) { @content };
+    }
+
+    @if $device == desktop {
+        @media (max-width: 1200px) { @content };
+    }
+
+    @if $device == big_screen {
+        @media (min-width: 1800px) { @content };
+    }
+}

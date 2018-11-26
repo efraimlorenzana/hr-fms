@@ -1,0 +1,36 @@
+.textbox {
+    width: 100% !important;
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid $color-black;
+    outline: none;
+
+    &:invalid {
+        border-bottom: 2px solid red;
+    }
+    
+    &:valid {
+        border-bottom: 2px solid $color-primary;
+    }
+    
+    &:placeholder-shown ~label {
+        transform: translate(25px, -40px);
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    & ~label {
+        transform: translate(0, -60px);
+        transition: all 1s;
+        color: red;
+    }
+
+    &-white {
+        color: white;
+    }
+
+    &-white > option {
+        background-color: $color-primary;
+    }
+}

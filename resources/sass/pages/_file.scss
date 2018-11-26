@@ -1,0 +1,114 @@
+.records  {
+    padding: 20px;
+
+    @include respond(tab_sm) {
+        padding: 0;
+    }
+
+    &__table {
+        &--row {
+
+        }
+
+        &--col {
+            padding: 10px 30px !important;
+
+            &-btn {
+                min-width: 50px !important;
+            }
+            
+            &-link {
+
+            }
+
+            &-filename {
+                width: 750px;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+
+                @include respond(tab_sm) {
+                    min-width: 300px;
+                }
+            }
+
+            &-view {
+
+            }
+
+            &-download {
+
+            }
+
+            &-delete {
+
+            }
+
+            &-norecord {
+                text-align: center;
+                font-size: 50px;
+                height: 100%;
+
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+    }
+}
+
+.upload {
+    padding-top: 50px;
+    padding-left: 50px;
+
+    @include respond(tab_sm) {
+        padding: 0;
+        text-align: center;
+    }
+
+    &__icon {
+        position: relative;
+
+        &--file {
+            font-size: 100px;
+            text-align: center;
+            cursor: pointer;
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+
+    &__browse {
+
+        &--input {
+            visibility: hidden;
+            width: 100%;
+        }
+    }
+}
+
+.delete {
+    padding: 30px;
+
+    &__message {
+        font-size: 20px;
+        color: red;
+
+        & strong {
+            text-transform: uppercase;
+            color: blue;
+        }
+    }
+
+    &__button {
+        margin-top: 20px;
+        &--no {
+            margin-right: 20px;
+        }
+
+        &--yes {
+             
+        }
+    }
+}

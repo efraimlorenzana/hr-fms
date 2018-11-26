@@ -1,0 +1,225 @@
+.setting {
+    padding: 20px;
+
+    @include respond(phone_lg) {
+        padding: 10px 0;
+    }
+    
+    &__menu {
+        &--list {
+            
+        }
+        
+        &--item {
+            list-style: none;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        
+        &--link {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: black;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-image: 
+            linear-gradient(150deg, $color-primary 0%, $color-primary 50%, 
+            $color-black 50%);   
+            background-size: 250%;
+            transition: all 1s;
+
+            @include respond(tab_lg) {
+                padding-left: 100px;
+            }
+
+            @include respond(phone_sm) {
+                padding-left: 15px;
+            }
+            
+            &:hover {
+                text-decoration: none;
+                background-position: 100%;
+                color: white;
+            }
+        }
+    }
+    
+    &__content {
+        min-height: 63vh;
+        max-height: 63vh;
+        overflow-y: scroll;
+        
+        border: 3px solid $color-primary;
+        background-color: $color-secondary;
+    }
+}
+
+.set-active {
+    color: white;
+}
+
+.users {
+    margin: 15px;
+    padding: 15px;
+    background-color: $color-white;
+    overflow-x: scroll;
+    
+    &__table {
+        &--header {
+            background-color: $color-primary;
+            
+            &-row {
+                
+            }
+            
+            &-col {
+                text-align: center;
+                min-width: 200px;
+            }
+        }
+        
+        &--body {
+            &-row {
+                
+            }
+            
+            &-col {
+                
+            }
+        }
+    }
+    
+    &__delete {
+        text-align: center;
+        
+        &--message {
+            margin-bottom: 50px;
+            &-text {
+                font-size: 20px;
+                font-weight: 700;
+                margin: 30px 0;
+                
+                & strong {
+                    color: red;
+                }
+            }
+        }
+        
+        &--button {
+            margin-bottom: 30px;
+            
+            &-cancel {
+                margin-right: 30px;
+            }
+            
+            &-proceed {
+                
+            }
+        }
+    }
+}
+
+.permission {
+    padding: 15px;
+    background-color: $color-white;
+    margin: 15px;
+    min-height: 55vh;
+    
+    
+    &__list {
+        padding: 0 !important;
+    }
+    
+    &__item {
+        list-style: none;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 700;
+        margin-bottom: 5px;
+        background-image: linear-gradient(to right bottom, $color-primary, blue);
+        cursor: pointer;
+        transition: all 1s;
+        
+        &:hover {
+            transform: scale(1.1);
+            color: $color-white;
+        }
+    }
+    
+    &__content {
+        padding: 15px;
+    }
+}
+
+.roles {
+    &__user--info {
+        &-name {
+            margin: 15px 0;
+        }
+    }
+    
+    &__details {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-left: 20px;
+        
+        &--radio,
+        &--label {
+            cursor: pointer;
+        }
+        
+        &--radio {
+            margin-bottom: 20px;
+        }
+        
+        &--radio:checked,
+        &--radio:checked ~&--label {
+            color: $color-primary;
+            font-weight: 700;
+        }
+        
+        &--label {
+            margin-right: 15px;
+        }
+    }
+    
+    &__note {
+        padding: 15px;
+    }
+    
+    &__paragraph {
+        
+        & > strong {
+            display: block;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        
+        & > em {
+            text-align: center;
+            width: 100%;
+            display: block;
+            color: red;
+        }
+    }
+    
+    &__notification {
+        font-weight: 700;
+        color: lightgreen;
+        background-color: rgba($color-black, .5);
+        padding: 5px 10px;
+        transform: scale(1.3);
+        text-align: center;
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+}
+
+.notify {
+    opacity: 1;
+    visibility: visible;
+    animation: displayNone .5s 3s forwards;
+}

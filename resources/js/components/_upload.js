@@ -1,0 +1,3 @@
+uploadFile = (e) => {
+    $('#formUpload').submit();
+}
